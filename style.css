@@ -1,0 +1,76 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background:url("https://cdn.wallpapersafari.com/68/10/CRFfoG.jpg")
+    /* background: rgb(146, 146, 231); */
+}
+
+.button-reset{
+    width:100px;
+    height: 50px;
+    margin: 10px;;
+    margin-bottom: 2rem;
+    color:rgb(11, 34, 240);
+    font-weight: 300;
+    box-shadow: 0 9px 18px 0 #1827ca, 0 8px 24px 0 #09090a;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 10000px;
+}
+
+.card {
+   
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px); 
+    margin: 5px;
+    position: relative;
+    transform: scale(1.0);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    background: #1c7ccc;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+header{
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgb(23, 48, 239);
+    font-size: 25px;
+    
+}
